@@ -1,11 +1,20 @@
 import React from 'react'
-
+import {Link} from 'react-router-dom'
+import logo from '../logo2.jpg'
 
 const Navbar = ()=> {
   return (
-    <div className="navbar">
-      <h2>navbar component</h2>
-    </div>
+    <nav className="navbar">
+      <div className="nav-center">
+        <Link to="/">
+          <img className="logo" src={logo} alt="coctail logo"/>
+        </Link>
+        <ul className="nav-links">
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
+        </ul>
+      </div>
+    </nav>
   )
 }
 

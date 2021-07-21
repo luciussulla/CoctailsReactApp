@@ -24,7 +24,7 @@ function App() {
           <Route path="/coctails/:id">
             <SingleCoctail/>
           </Route>
-          <Route path="error">
+          <Route path="*">
             <Error/>
           </Route>
         </Switch>

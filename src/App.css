@@ -1,50 +1,82 @@
 *{
   margin:0; 
   padding: 0; 
+  font-family: Helvetica, sans-serif
+}
+
+:root {
+  --universal-font: #333; 
 }
 
 body {
   background-color: aquamarine;
 }
 
+.btn {
+  display: inline-block; 
+  text-decoration: none;
+  padding: 5px 10px; 
+  color: var(--universal-font);
+  text-transform: uppercase;
+  border: 1px solid #fff; 
+  background-color: #fff;
+  cursor: pointer; 
+  outline: none; 
+  border-radius: 5px; 
+  letter-spacing: .15rem;
+  padding: 10px;
+}
+
+.btn:hover {
+  background-color: #efefef;
+  border: 1px solid #efefef; 
+}
+
+.btn-primary {
+  background-color: #fff;
+}
+
 .navbar {
   box-sizing: border-box;
-  font-size: .9rem;
+  font-size: 1rem;
   height: 100px; 
   background-color: white;
   padding: 20px; 
-  color: #666; 
+  color: var(--universal-font); 
   text-transform: uppercase;
   letter-spacing: .15rem;
   box-shadow: 0 0 10px rgba(0,0,0,00.5);
 }
+
+.nav-center {
+ /* border: 1px solid red; */
+
+ display: flex; 
+ justify-content: space-around;
+}
+
+nav ul {
+  list-style-type: none; 
+}
+
+nav li {
+  display: inline-block; 
+  margin-left: 20px; 
+  padding: 20px; 
+}
+
+nav li a {
+  text-decoration: none; 
+  color: var(--universal-font)
+}
+
+
 /* search box */ 
-
-.form-control {
- margin: 0 auto; 
- /* border: 1px solid blue;  */
-}
-
-.search-input {
-  box-sizing: border-box;
-  display: inline-block; 
-  width: 100%; 
-  padding: 7px; 
-  background-color: aquamarine;
-  color: #444;
-  border: aquamarine;
-  outline: none; 
-}
-
-.search-label {
-  display: inline-block; 
-  margin-bottom: 15px; 
-}
-
 .search-box {
-  margin: 16px; 
+  margin-top: 25px; 
+  border-radius: 5px; 
   font-size: 1.2rem; 
-  background-color: #efefef;
+  background-color: #fff;
   position: relative; 
   left: 50%; 
   transform: translateX(-50%);
@@ -53,7 +85,130 @@ body {
   box-sizing: border-box;
   padding: 15px; 
   box-shadow: 5px 5px 3px rgba(0,0,0,0.3);
+  font-size: .9rem; 
+  /* centering the form contol in the middle vertically */ 
+
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
 }
 
+.form-control {
+ /* margin: 0 auto;  */
+ /* border: 1px solid blue;  */
+ letter-spacing: .15rem;
+}
 
+input.search-input {
+  border-radius: 5px; 
+  box-sizing: border-box;
+  display: inline-block; 
+  width: 100%; 
+  padding: 7px; 
+  background-color: aquamarine;
+  border: aquamarine;
+  outline: none; 
+  margin-top: 7px; 
+}
 
+.search-label {
+  display: inline-block; 
+  margin-bottom: 10px; 
+}
+
+/* logo */ 
+.logo {
+  width: 90px; 
+  display: inline-block; 
+}
+/* About sectin */ 
+.section {
+  padding: 20px; 
+  position: absolute; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  /* border: 1px solid salmon;  */
+}
+
+.about-section {
+  line-height: 1.5rem; 
+  /* border: 1px solid blue; */
+  letter-spacing: .08rem; 
+}
+
+.section-title {
+  text-transform: capitalize;
+  margin: 40px 0; 
+  text-align: center; 
+  letter-spacing: .2rem;
+}
+/* error page */ 
+
+.error-container {
+ text-align: center;
+ height: 150px; 
+
+ display: flex;
+ flex-direction: column; 
+ justify-content: space-around;
+ align-items: center;
+}
+
+/* Cocktails */ 
+.cocktail-section {
+  width: 80%; 
+  margin: 0 auto; 
+}
+
+.cocktails-center {
+  /* border: 1px solid red;  */
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: space-around;
+}
+.cocktail {
+  /* border: 1px solid blue; */
+  margin-bottom: 30px; 
+  background-color: #fff;
+  box-shadow: 4px 4px 5px rgba(0,0,0,0.3)
+}
+
+.img-container {
+ width:270px;  
+}
+
+.img-container img {
+  width: 100%; 
+}
+
+.cocktail-footer {
+  padding: 20px; 
+  min-height: 120px; 
+
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.cocktail-footer h3 {
+  text-transform: uppercase; 
+  font-size: 1.4rem; 
+}
+
+.cocktail-footer h4 {
+  
+  letter-spacing: .15rem;
+  font-size: .9rem;
+  font-weight: light; 
+}
+
+.cocktail-footer p {
+  color: #888; 
+}
+
+.cocktail-link {
+  background-color: rgb(208, 243, 231);
+  width: 100px; 
+  padding: 7px; 
+  box-sizing: border-box;
+}
