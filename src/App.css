@@ -38,6 +38,51 @@ body {
 .btn-primary {
   background-color: #fff;
 }
+/* LOADING SPINNER */ 
+
+.spinner {
+  position: relative; 
+  top: 30px; 
+  left: 50%; 
+  transform: translateX(-50%);
+  display: inline-block; 
+  vertical-align: middle;
+  width: 64px; 
+  height: 64px; 
+  border-radius: 64px;
+}
+
+.spinner::before {
+  position: absolute; 
+  display: inline-block;
+  border-radius: 64px; 
+  content: "";
+  width: 64px;
+  height: 64px;
+  color: #323b40;
+  box-shadow: inset -5px 0 0 5px #323b40;
+  clip: rect(0px, 64px, 32px, 0px);
+  animation: rotator .5s infinite linear; 
+}
+
+@keyframes rotator {
+  0% {
+    transform: rotate(-180deg);
+    box-shadow: inset -5px 0 0 5px #323b40;				
+  }
+  
+  50% {
+    box-shadow: inset -1px 0 0 1px #323b40;
+    transform: rotate(0deg); 
+  }
+  
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+
+/* NAVBAR */ 
 
 .navbar {
   box-sizing: border-box;
@@ -52,10 +97,9 @@ body {
 }
 
 .nav-center {
- /* border: 1px solid red; */
-
  display: flex; 
  justify-content: space-around;
+ align-items: center; 
 }
 
 nav ul {
@@ -73,7 +117,24 @@ nav li a {
   color: var(--universal-font)
 }
 
+nav span.drink-icon {
+  font-size: 2rem; 
+  color:rgb(9, 226, 154);
 
+  display: inline-block; 
+  border-radius: 50%; 
+  border: 2px solid rgb(9, 226, 154);
+  width: 50px; 
+  height: 50px; 
+  text-align: center; 
+  position: relative;
+}
+
+nav .i-element {
+  position: absolute; 
+  top: 7px; 
+  left: 10px; 
+}
 /* search box */ 
 .search-box {
   margin-top: 25px; 
